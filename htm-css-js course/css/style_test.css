@@ -1,0 +1,297 @@
+/* all h2 elements */
+h2 {
+    color: red;
+    text-align: center;
+}
+
+
+/* all with class="highlight" */
+.highlight {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    background-color: green;
+    opacity: .6;
+}
+
+/* element with id="mainPoint" */
+#mainPoint {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: red;
+    opacity: .7;
+}
+
+/* all p AND h1 elements */
+p,
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+/* all p elements with class="highlight" */
+p.highlight {
+    font-style: italic;
+}
+
+/* all elements with class 'highlight' as well as with class 'mainpoint'. */
+.mainpoint.highlight {
+    color: red;
+    background-color: black;
+}
+
+/* any article element which is a direct child of a section element,i.e., any article element whose immediate parent is a section element. */
+section>article {
+    color: green;
+    font-size: 24px;
+}
+
+/* any h2 element which is a direct child of a section element,i.e., any h2 element whose immediate parent is a section element. */
+section>h2 {
+    color: green;
+}
+
+/* all li elements that are inside a section element. */
+section li {
+    color: green;
+}
+
+header li {
+    list-style: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    background-color: green;
+    border: 1px solid blue;
+    color: black;
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+a:hover,
+a:active {
+    background-color: red;
+    color: purple;
+}
+
+header li:nth-child(3) {
+    font-size: 24px;
+}
+
+section div:nth-child(odd) {
+    background-color: gray;
+}
+
+section div:nth-child(4):hover {
+    background-color: green;
+    cursor: pointer;
+}
+
+.style {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0000ff;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 24px; /* points (pt) are used in print, not screen.*/
+    text-transform: uppercase;
+    text-align: right;  
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+    
+#box {
+    background-color: blue;
+    padding: 10px;
+    border: 5px solid black;
+    width: 300px;
+    height: 50px;
+    margin-top: 50px;
+    overflow: auto;
+}
+
+#content {
+    background-color: #90EE90; /* green */
+}
+  
+h1 {
+    margin-bottom: 30px;
+}
+
+#bg {
+    width: 100px;
+    height: 70px;
+    background-color: blue;
+}
+
+/********** Base styles **********/
+h1 {
+    margin-bottom: 15px;
+  }
+  
+  p {
+    border: 1px solid black;
+    margin-bottom: 15px;
+  }
+  #p1 {
+    background-color: #A52A2A;
+    width: 300px;
+    height: 300px;
+  }
+  #p2 {
+    background-color: #DEB887;
+    width: 50px;
+    height: 50px;
+  }
+  
+  /********** Large devices only **********/
+  @media (min-width: 1200px) {
+    #p1 {
+      width: 80%;
+    }
+    #p2 {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  
+  /********** Medium devices only **********/
+  @media (min-width: 992px) and (max-width: 1199px) {
+    #p1 {
+      width: 50%;
+    }
+    #p2 {
+      width: 100px;
+      height: 100px;
+    }
+    body {
+      background-color: blue;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    margin-bottom: 15px;
+  }
+  
+  p {
+    border: 1px solid black;
+    background-color: #A52A2A;
+    width: 90%;
+    height: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: Helvetica;
+    color: white;
+  }
+  
+  /* Simple Responsive Framework. */
+  .row {
+    width: 100%;
+  }
+  
+  /********** Large devices only **********/
+  @media (min-width: 1200px) {
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+      float: left;
+      border: 1px solid green;
+    }
+    .col-lg-1 {
+      width: 8.33%;
+    }
+    .col-lg-2 {
+      width: 16.66%;
+    }
+    .col-lg-3 {
+      width: 25%;
+    }
+    .col-lg-4 {
+      width: 33.33%;
+    }
+    .col-lg-5 {
+      width: 41.66%;
+    }
+    .col-lg-6 {
+      width: 50%;
+    }
+    .col-lg-7 {
+      width: 58.33%;
+    }
+    .col-lg-8 {
+      width: 66.66%;
+    }
+    .col-lg-9 {
+      width: 74.99%;
+    }
+    .col-lg-10 {
+      width: 83.33%;
+    }
+    .col-lg-11 {
+      width: 91.66%;
+    }
+    .col-lg-12 {
+      width: 100%;
+    }
+  }
+  
+  /********** Medium devices only **********/
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+      float: left;
+      border: 1px solid green;
+    }
+    .col-md-1 {
+      width: 8.33%;
+    }
+    .col-md-2 {
+      width: 16.66%;
+    }
+    .col-md-3 {
+      width: 25%;
+    }
+    .col-md-4 {
+      width: 33.33%;
+    }
+    .col-md-5 {
+      width: 41.66%;
+    }
+    .col-md-6 {
+      width: 50%;
+    }
+    .col-md-7 {
+      width: 58.33%;
+    }
+    .col-md-8 {
+      width: 66.66%;
+    }
+    .col-md-9 {
+      width: 74.99%;
+    }
+    .col-md-10 {
+      width: 83.33%;
+    }
+    .col-md-11 {
+      width: 91.66%;
+    }
+    .col-md-12 {
+      width: 100%;
+    }
+  }
+  .row {
+    margin-bottom: 15px;
+  }
+  .row > div {
+    border: 2px solid red;
+    background-color: gray;
+  }

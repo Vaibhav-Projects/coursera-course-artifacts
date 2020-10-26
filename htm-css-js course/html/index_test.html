@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Heading Elements</title>
+    <link rel="stylesheet" href="style_test.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        header element - Some header information goes here. Usually consists of company logo, some tag line, etc.
+        Sometimes, navigation is contained in the header as well.
+        <nav>nav (short for navigation) element - Usually&nbsp; contains&nbsp; links to different parts of the web site.
+        </nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="http://goo.gl/V0Wl6s" target="_blank">AngularJS Course</a></li>
+            <li><a href="http://www.facebook.com/CourseraWebDev" target="_blank">Facebook Fan Page</a></li>
+        </ul>
+    </header>
+    <h1>Main Heading of the Page (hard not to have it)</h1>
+    <h1 id="top">Links to Sections of The Same Page</h1>
+    <section>
+        <ul>
+            <!-- Link to every section in the page -->
+            <li><a href="#section1">#section1</a></li>
+            <li><a href="#section2">#section2</a></li>
+        </ul>
+    </section>
+    <section>
+        Section 1
+        <article>Article 1</article>
+        <article>Article 2</article>
+        <article>Article 3</article>
+    </section>
+    <section>
+        Section 2
+        <article>Article 4</article>
+        <article>Article 5</article>
+        <article>Article 6</article>
+        <div>Regular DIV element</div>
+    </section>
+    <section>
+        Section 3
+        <article>Article 7</article>
+        <article>Article 8</article>
+        <article>Article 9</article>
+        <div>Regular DIV element</div>
+    </section>
+    <h1>Internal Links</h1>
+    <section>
+        We can link to a file in the same directory as this HTML file like this:
+        <a href="same-directory.html" title="same dir link">Linking to a file in the same directory</a>
+
+        <a href="same-directory.html" title="same dir link">
+            <div> DIV Linking to a file in the same directory</div>
+        </a>
+    </section>
+    <h1 id="top">External Links</h1>
+    <section>
+        <p>
+            Let's link to a Facebook Fan page I created for this course!
+            <!-- link to Facebook page WITH TARGET-->
+            <a href="http://www.facebook.com/CourseraWebDev" target="_blank" title="Like Our Page!">Course Facebook
+                Page</a>
+        </p>
+    </section>
+    <section id="section1">
+        <h3>(#section1) Section 1</h3>
+        <p>test</p>
+    </section>
+    <div>
+        <h2><a name="section2">(#section2) Section 2</a></h2>
+        <p>
+            Back to top: <a href="#top">Back to Top</a>
+        </p>
+    </div>
+    <p>
+        <img src="http://lorempixel.com/output/nature-q-c-640-480-1.jpg" width="640" height="480">
+    </p>
+    <h1>Simple Selectors (h1)</h1>
+    <h2>Subheading 1 (h2)</h2>
+    <p class="highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus amet alias est? Nobis cum
+        quasi at soluta odit, maiores quaerat dolores expedita ex nemo ea repellendus dolorem sed maxime quos?</p>
+    <p class="highlight">Paragraph with attribute class="highlight". Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit.</p>
+    <h2>Subheading 2 (h2)</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi nemo ipsum dolores vel modi magnam veniam
+        alias at nam. Voluptatem officiis dolor dolorem aspernatur dolorum modi ipsa, nobis animi aut!</p>
+    <div>This is the main point of the entire article. So, attribute
+        <span id="mainPoint">id="mainPoint".</span> </div>
+    <h1 class="highlight">Element with Class Selector</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus amet alias est? Nobis cum quasi at soluta
+        odit, maiores quaerat dolores expedita ex nemo ea repellendus dolorem sed maxime quos?</p>
+    <p class="highlight">This is P with CLASS="highlight"</p>
+    <div class="mainpoint highlight">This is the main point of the entire article.
+    </div>
+    <h1>Child Selector</h1>
+    <section>
+        <h2>Subheading 1</h2>
+        <div>
+            <article>ARTICLE which inside DIV, which is inside SECTION</article>
+        </div>
+    </section>
+    <section>
+        <article>ARTICLE as a direct child of the SECTION element.</article>
+    </section>
+    <h2>Subheading 2</h2>
+    <h1>Decendant Selector</h1>
+    <section>
+        Table of contents:
+        <ul>
+            <li>Article 1</li>
+            <li>Article 2</li>
+            <li>Article 3</li>
+        </ul>
+    </section>
+    <article>
+        Shopping List:
+        <ul>
+            <li>Cookies</li>
+            <li>Cake</li>
+            <li>Pie</li>
+        </ul>
+    </article>
+    <section>
+        <div>DIV 1</div>
+        <div>DIV 2</div>
+        <div>DIV 3</div>
+        <div>DIV 4</div>
+        <div>DIV 5</div>
+        <div>DIV 6</div>
+    </section>
+    <p class="style">this is wonderful course to learn a lot of new things</p>
+    <div>Regular text</div>
+    <div style="font-size: 2em;">2em text
+        <div style="font-size: 2em;">4em text
+            <div style="font-size: .5em;">2em again!</div>
+        </div>
+    </div>
+    <h1>Box Model</h1>
+
+    <div id="box">
+        <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit error quis ab perspiciatis
+            eos inventore recusandae iste itaque numquam facilis, tenetur. Doloribus officiis quae facilis, nisi, ex
+            similique. Animi, perferendis.
+        </div>
+    </div>
+    <div id="bg">Background properties are fun!</div>
+
+    <h1>Two Column Design</h1>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio aliquid cupiditate
+            perferendis fuga, sit quasi alias vero sunt non, ratione earum dolores nihil! Consequuntur pariatur totam
+            incidunt soluta expedita.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta beatae voluptatibus veniam placeat
+            iure unde assumenda porro neque voluptate esse sit magnam facilis labore odit, provident a ea! Nulla,
+            minima.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nemo vitae, cupiditate odio magnam
+            reprehenderit esse eum reiciendis repellendus incidunt sequi! Autem, laudantium, accusamus. Doloribus
+            tempora alias minima laborum, provident!</p>
+        <section>This is regular content continuing after the the paragraph boxes.</section>
+    </div>
+
+    <h1>Floating Elements</h1>
+
+    <div>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+        <section>This is regular content continuing after the the paragraph boxes.</section>
+    </div>
+
+    <h1>Media Queries</h1>
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+    <h1>Responsive Layout</h1>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-6">
+            <p>Item 1</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <p>Item 2</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <p>Item 3</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <p>Item 4</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <p>Item 5</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <p>Item 6</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <p>Item 7</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <p>Item 8</p>
+        </div>
+    </div>
+
+    <aside>
+        ASIDE - Some information that relates to the main topic, i.e., related posts.
+    </aside>
+
+    <footer>
+        &copy;JHU &lt;Copyright&gt; &amp;2015&amp;
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+* {
+    font-size: 16px;
+}
+
+#header-nav {
+    background-color:grey;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.heading {
+    color:black;
+    font-size: 1.7em;
+    font-weight: bolder;
+}
+
+.menu-heading {
+    font-size: 2em;
+}
+
+body > p {
+    padding: 15px;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.content {
+    background-color: grey;
+    margin-bottom:30px;
+    color: black;
+}
+
+.content > h2 {
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+.navbar-nav a:hover,.navbar-nav a:focus {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-toggle {
+    background-color: black;
+}
+
+#nav-list {
+    margin-top: 10px;
+}
+
+#nav-list a {
+    color: black;
+    text-align: center;
+    border-color: black;
+}
+
+#nav-list a:hover {
+    background: #E7E7E7;
+}

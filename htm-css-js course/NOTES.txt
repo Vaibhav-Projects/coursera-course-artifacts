@@ -1,0 +1,530 @@
+*************************************************************************************************************   
+                                      HTML - HyperText Markup Language
+
+HyperText - Text which contains links to another text 
+HyperMedia is extension of HyperText
+Markup - To Marksomething up (Anotate) - tags
+Language - Means it has it's own syntax
+
+Technologies that drive web - 
+HTML - structure 
+CSS - style
+JavaScript - behavior 
+Real Life example - House
+
+HTML 4.0 - First HTML standard take place
+2011 - introduce in HTML 5 
+W3C, WHATWG - Organization which are creating standard
+W3C - HTML standard
+WHATWG - HTML evolving
+
+Best site to check standards - 
+1. W3
+2. caniuse.com
+3. validator.w3.org
+4. w3schools.com
+
+Website to code - 
+1. https://jsfiddle.net/
+2. https://codepen.io/
+3. https://css-tricks.com/
+
+Learn - https://www.freecodecamp.org/learn
+
+Anatomy of HTML tag - <opening_tag>content</closing_tag>
+eg. = <p id="myId">test</p>  where p is element, id is attributeName and myId is attributeValue
+* No space allowded between bracket and tag name 
+* space allowded between tag name and attribute
+* No attribute on closing tag
+
+--------------------------------------------------------------------------------------------------------------
+
+Basic html document structure - 
+* Need to start with <!doctype html>
+* <html> </html> - All document code inside it
+* <head> </head> - Main content of page  - Metadata about main content
+* <body> - root of all content that is visible to user - view port
+
+--------------------------------------------------------------------------------------------------------------------
+
+HTML Content models - 
+Elements fall into two categories -
+1. Block-level Elements
+* Render to begin on new line
+* May contain inline or other block level
+Flow content roughly translates into block element
+2. Inline Elements
+* Render on same line
+* only contain other inline elements
+phrasing content rougly translates into inline element
+<div> - Division - block level element
+<span> - Span - Inline element
+
+Link - https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html
+
+------------------------------------------------------------------------------------------------------------
+
+semantic - relating to meaning in language or logic
+semantic html element - element that implies some meaning to the content
+example - <h1>, <h2>, <section>, <article>, <aside>, <header> etc
+
+-------------------------------------------------------------------------------------------------------------
+
+Lists - group related content
+type of lists - unordered list and ordered list
+unordered list- <ul> 
+list - <li> 
+Example - <ul><li>apple</li><li>orange</li></ul>
+ordered list - <ol>
+Example - <ol><li>Take coffe and milk</li><li>Mix them</li></ol>
+
+-------------------------------------------------------------------------------------------------------------
+
+HTML Character Entity References - 
+3 character you should always escape - 
+Instead of -  <  use -  &lt; 
+Instead of -  >  use -  &gt;
+Instead of -  &  use -  &amp;
+&copy; for copyright symbol
+&nbsp; - not breaking space - it is not used for space
+
+-------------------------------------------------------------------------------------------------------------
+
+Links - 
+<a> - Inline and block level element at same time
+Internal Links - link to internal file (refrence name) - same dir link
+External Links - provide link to web (start with http)
+Example - <a href="link" target="_blank" title="test">text</a>
+target - to open in new tab
+Fragment identifier - Link to sections of the same page
+Example - <a href="#section">CLICK</a>
+          <section id="section">TEST</section>
+          <a name="section"></a>
+
+-------------------------------------------------------------------------------------------------------------
+
+Displaying images - 
+<img src="source_link" width="10" height="10" alt="test"> - tag to display image
+img tag is an inline element
+<!----> - Comment
+
+**************************************************************************************************************
+                                  CSS - Cascading style sheet
+
+To style the content (website) we use css.
+* it is a powerful technology
+* user experience of content matters 
+Best Websites -
+* CSS ZEN GARDEN
+
+Anatomy of CSS rule - 
+* It work by associating an rule to an html element
+* It starts with selector which consists of declaration (it has property and value).
+Example - p {
+                color: blue;
+            }
+In above example p is selector and everything inside curly braces is declaration.
+Collection of all the rules called stylesheet.
+code is inside <style></style> tag where style should be inside head tag
+
+-------------------------------------------------------------------------------------------------------------
+
+Selector - it is used to find the html elements which you want to style.
+Types of selector - 
+1. Element Selector - 
+Example - p {color:blue;} Every p html element will have blue color
+2. Class Selector - starts with .class_name
+Example - .blue {color:blue;}  <p class="blue"></p>
+3. Id Selector - starts with #id_name
+Example - #blue {color:blue;} <div id="blue"></div>
+4. Grouping Selector - to group various selector together 
+Example - div, .blue {color:blue;}
+5. Combining Selector - 
+    types - 
+    * Element with class selector.
+    Example - p.big {font-size: 20px;} - Every p that has class=big (It must do not have space between two selector)
+    * Child selector 
+    Example - article > p {color:blue;} It is read from right to left. this example means every p that is direct child of article element
+    * Descendant selector 
+    Example - article p {color:blue;} It is read from right to left. this example means every p that is inside the article element
+6. Pseudo-Class selector - 
+Example - :link, :visited, :hover, :active, :nth-child etc
+
+* ID’s are unique
+* Each element can have only one ID
+* Each page can have only one element with that ID
+
+* Classes are not unique
+* You can use the same class on multiple elements.
+* You can use multiple classes on the same element.
+
+-------------------------------------------------------------------------------------------------------------
+
+Style Placement - choice for placing style in one place vs another place effects which style overrides another
+Placement of stylesheet -
+* Internal - within <style> tag
+* Inline -   with element tag to style 
+             Example - <p style="color:blue;>test</p> 
+* External - add a link to external style sheet in html document.
+             Example - <head><link rel="stylesheet" href="style.css"></link></head> 
+head styles are usually there to override external one
+
+-------------------------------------------------------------------------------------------------------------
+
+Cascading algorithm - below concepts revloves around cascading algorithm.
+* origin precedence - it has simple rule that "last declaration wins" and "declaration merge"
+because html is processed sequentially, top to bottom and 
+* inheritance - it allows us to write more global styles on parent elements and then "fine-tune" 
+                the styles for some of the child elements as needed. Such approach makes writing CSS very 
+                efficient. 
+* specifity   - most specific selector combination wins.
+specifity score -                     [style=""], [id], [class, pseudo-class, attribute], [no of elements]
+Example - <h2 style="color: green;">     1          0                  0                        0
+        - div p {color:green;}           0          0                  0                        2
+!important - it overrides everything and make it of high priority 
+
+-------------------------------------------------------------------------------------------------------------
+
+Styling text - various common text style attributes
+*  font-family, color, font-style, font-weight, font-size, text-transform, text-align
+Useful links - https://www.w3schools.com/cssref/css_websafe_fonts.asp
+Relative font sizing -  two unit of measurement - % and em
+em - width of letter m in this particular font we are using - it's a relative size
+
+-------------------------------------------------------------------------------------------------------------
+
+The Box Model - browser wraps your content in a box where outside content you will have padding, border, margin
+and browser by default set some value for theses fields which can be override by css.
+Example - body {margin:0, padding:0}
+box-sizing: content-box, border-box
+* box-sizing property cannot be inherited.
+* but we can use that in star(*) selector - it means to apply to all element - it can be used for browser style reseting.
+overflow is used to restrict overflowing the content
+Horizontal margins are cummulative margin
+Vertical marging are collapsing margin
+
+The Background property - backgound-center, backgound-image etc css property
+
+-------------------------------------------------------------------------------------------------------------
+
+Position Elements by Floating - To make page flexible with expand and collapse of a browser
+float: left, right etc 
+and clear: left, right to clear the floating data from that position
+
+-------------------------------------------------------------------------------------------------------------
+
+Relative and Absolute Element Positioning - 
+Static positioning  - Normal document flow. Default for all element expcept html.
+Relative positioning - Element is positioned relative to it's position in normal document flow.
+html element has it's positioning set to relative.
+Example - top, bottom, left, right
+p {
+    position:relative; top: 50px; left: 50px;
+}
+Absoulte positioning - All offsets (top, bottom , right, left) are relative to position of nearest ancestor
+which has positioning set on it, other than static. It get taken out of regular docuement flow
+Example - p {
+    position:absolute; bottom: 10px, right: 10px;
+}
+
+-------------------------------------------------------------------------------------------------------------
+
+Media queries - It allows to group styles together and target them to devices based on some criteria.
+Basic syntax - @media (max-width: 767px){ - media feature resolved to true or false.
+                p {
+                    color:blue;
+                  }
+               }
+Media query common features - max-width, min-width, orientation, screen, print
+common logic operators - and
+                         , is equivalent to or
+Careful never to overlap boundaries
+
+-------------------------------------------------------------------------------------------------------------
+
+Responsive design - Site designed to adapt its layout to the viewing environment by using fluid,
+proportion-based grids, flexible images and CSS3 media queries. 
+proportion-based drids - width of these coulmns should be specified in percentage
+* Site's layout should adapt the size of the device.
+
+12-Column grid responsive layout - Screen is divided into 12 columns means 1 cloumns covers 8.33% of screem
+we can have a nested grid also
+
+Response framework example - 
+.row {
+    width:100%;
+}
+
+-------------------------------------------------------------------------------------------------------------
+
+Bootstrap - It is one of the most powerful css framework created by engineer of twitter
+- It is popular HTML, CSS and JS framework for developing responsive, mobile firsts project on web
+mobile first - code you mobile version first
+             - plan for mobile sites but start coding with desktop version.
+Disadvantage of bootstrap - 
+1. too big, too bloated - lot of feature you will never use.
+
+Bootstrap grid system - 
+Example - <header class="container"> - Must be inside a container (or container-fluid)
+            <nav class="row"> - Create horizontal group of columns
+                <div class="col-md-4">Col 1</div>
+            </nav>
+          </header>
+botstrap grid should always has to be inside container class 
+container-fluid -> It streches the layout to full width of browser and provide consistent padding.
+container -> It has fixed width depend upon browser
+row -> It created horizontal group of columns (Applies negative left/right margins)
+columns -> template - col-SIZE-SPAN 
+                      where SIZE is screen width range identifier. ex MD, LG etc
+                      where SPAN is how many columns element should span (1-12 range)
+                     
+
+***************************************************************************************************************
+                              Coding the Static Restaurant Site
+
+Visit with client -
+* Most client have no idea what they want! (Ask questions to figure out what they want)
+* Visit some sample website.
+* Less infomration is more! (Encourage your client not to cram info to the site).
+google - web development client questionare.
+* Involves other if needed.
+
+-------------------------------------------------------------------------------------------------------------
+
+Design overview - Always create first mockup website to see if user approves the layout.
+Tool - balsamiq.com
+Navigation bar - <nav> - navigation tag
+bootstrap classs for navgiation tag - navbar navbar-default
+nav menu - nav-list
+menu button styling - navbar-toggle
+glyphicon
+
+navbar layout, text and dropdown menus - need to write media queries
+relative sizing
+vw - viewport width (ivw = 1% of viewport width)
+
+Jumbotron - inside main content container img-responsive visible-xs
+box-shadow
+
+Navigation Tiles - it should be under Jumbotron container 
+placehold.it 
+opacity for see through
+
+Embedding the map in website - Menu -> share or embedd map need to use href and iframe
+
+Coding the footer - footer element <footer> and class = panel-footer
+
+Coding the menu page - similar with main page only menu categories will be changed (text-center class)
+
+Coding the single menu category page - active class to select the active class
+responsive column reset
+
+**************************************************************************************************************
+                                         Java Script
+
+Where to include java script code (Internal and extenal) in html -
+1. Can be used inside the head tag
+2. Can be used inside the body tag (right before body closing tag)
+Example - Internal - <script> js code here </script>
+          External - <script src="js/source location"></script> (Always requires closing script tag)
+
+Single thread engine.
+
+-------------------------------------------------------------------------------------------------------------
+
+Defining variables - 
+Example - var message = "h1"; (JS is dynamically typed language i.e. same variable can hold different types 
+during the life of execution.)
+
+Defining function - 
+Example - function function_name { }
+        - var a = function () { } (Value of function assigned to a no the returned result)
+        - function function_name (arg1, arg2) {return x > y;}
+
+Invoke function - 
+Example - a(); (Invoke and execution)
+        - function compare (x, y) {}
+        - var a = compare(4,5);
+
+Scope - Global and function (lexical)
+Scope Chain - Everything is executed in an Execution context.
+Outer refrence matter and location at which function defines matters
+
+-------------------------------------------------------------------------------------------------------------
+
+Javascript Types - A type is particular data structure.
+It has 7 build in type : 6 primitive and 1 Object type.
+Object is a collection of name/value pairs.
+Primitive type represents a single, immutable (it can't be changed) value.
+Boolean, undefined (no value has been ever set), null (signifies lack of value), Number, String, Symbol.
+
+-------------------------------------------------------------------------------------------------------------
+
+Common Language Constructs - 
+1. String concatination - var string = "Hello" ; string += "World";
+2. Math operators - ((5+4)/3) (precedence of paranthesis) ; undefined/5 (NaN - Not a number)
+3. Equality - var x=4, y=5 ; x==y (check equals) ; x="4" then also x==y
+Type coercion - in above case js covert x or y type to same to other.
+4. String equlaity - It check if data are equal and also don't do a type coercion. 
+5. Boolean All false situation - false, null, undefined, "", 0 , NaN  (check using Boolean())
+6. Boolean All true situation - true, "hello", 1, -1, "false"
+7. Best practice for {} style - function a()                  - Wrong syntax (because bydefault js add semicolon at the end)
+                                {
+                                    return 
+                                    {
+                                        name: "Vaibhav"
+                                    };
+                                }
+
+                            - function b(){                  - Right syntax
+                                return{
+                                    name: "Yaakov"
+                                };
+                                }
+8. loop - var sum = 0; for (var i = 0; i < 10; i++){
+                    sum = sum + i;
+          }
+
+-------------------------------------------------------------------------------------------------------------
+
+Handling default value - default value to a variable is undefined.
+1. if(a==undefined){
+    a="b";
+}
+2. a = a || "b"
+both 1 and 2 are same statement.
+
+-------------------------------------------------------------------------------------------------------------
+
+Object - It is collection of name and value pair.
+Object Creation - 
+Example - var company = new Object(); //created a refrence of Object ; company.name="ABC";
+          two notation - company.name and company["name"]
+          eg. company.name of owner - will not work but company.["name of owner"] - will work
+
+Object literal - best way to use
+Example - var facebook = {
+                name: "facebook",
+                ceo: {
+                    firstName: "Vaibhav"
+                    }
+                }
+
+-------------------------------------------------------------------------------------------------------------
+
+Functions - they are first-class (it means you can do all thing with function as your
+can do with primitive and objects) data types , function are objects.
+Example - function add(x,y) {return x+y;}
+          add.version = "v.1.0"; console.log(add) - it will print code of this function i.e. it call to strings method.
+          console.log(add.version) - v.1.0
+
+- We can create a function inside a function.
+- We can pass function as an argument also.
+
+-------------------------------------------------------------------------------------------------------------
+
+Passing variables by value vs reference - 
+By Value - b=a passing/copying by value means changing copied value in b does not effect the value stored in a and vice-versa
+By Refrence - b=a passing/copying by value means changing copied value in b does effect the value stored in a and vice-versa
+Primitive are passed by value and object are passed by refrence.
+
+-------------------------------------------------------------------------------------------------------------
+
+this - points to global object
+Function Constructors - (developer start function name with capital to know they are function constructor)
+Example - function Circle (radius) { console.log(this); }; var myCircle = new Circle();
+        - Circle.prototype.getArea = function () {}
+
+Object literals  - var Circle = {radius:10};
+
+-------------------------------------------------------------------------------------------------------------
+
+Arrays - It is a collection of data.
+Example - var array = new Array(); array[0]="a"; can pass a function to array also 
+        - array[1] = function (name) {console.log(name)} - array[1]() an pass a function to array also
+        - array[2] = {course:"HTML"} - can pass object to array also
+    
+Can a create a array using short hand array creation.
+Example - var name = ["a","b","c"];
+
+We can loop through everydata of an array and also loop through an object - for (var prop in object)
+
+Fake Namespaces - It is container for some functionality and declaration.
+Immediately invoked function expressions - 
+Example - (function (window) {console.log("Hello"); window.name = name})(window);
+
+************************************************************************************************************
+                               Document Object Model Manipulation
+
+Where to include script.js file ?
+Document object - Store whole html code.
+document code should be written at correct place. - best place is at end of body tag (as most of the code is done till then)
+Whole website is think as an document.
+
+getElementById - to get the document element by id
+Example - var name = document.getElementById("name").value;
+querySelector - to find the element by a selector 
+Example - var title = document.querySelector("h1").textContent;
+
+Event Handlers - They are basically functions that you bind using specific methods to certain events that
+happen in browser
+Example - onclick, onblur, onkeydown etc
+Disadvantage - will dirty up our html code with all event code
+
+Unobstructive event binding - html dont need to know about js
+
+addEventListener - add event listener to specific document
+
+event argument - passed to every event handler - it is an actual event which is trigerring that specific function
+
+-------------------------------------------------------------------------------------------------------------
+                                             AJAX
+
+HTTP Basics - Language with which client (browser) communicate with server.
+HyperText Transfer Protocol - Request/Response stateless protocol (don't have any inherited user info).
+URN - Uniform resouce name - uniquely indentifies resource or name of resource.
+    - don't tell how to get resource 
+Example - /js/script.js
+URL - Uniform resource locator - Form of URI that provides info on how to get resouce.
+HTTP Method - GET, POST, PUT, DELETE
+
+AJAX - Asynchronous JavaScript and XML
+- Now most plain text or json is used. 
+- HTTP request sent by Javascript.
+- faster response.
+- response with only small piece of data that's inserted into current page.
+
+Synchronous Excecution - Execution of one programming at a time (Can't start execution of another instruction
+until the first instruction is finised its execution).
+
+Asynchronous Exceution - Execution of more than one instruction at a time (The actual Excecution is done
+in a separte process).
+
+HTTPRequestor is asynchronous
+
+JSON - JavaScript Object notation (Completely idenpendent of any programming language)
+- It is an string
+- It syntax is based on JSON Object literal
+
+Converting JSON String to Object - 
+var obj = JSON.parse(jsonString)
+
+Converting Object to JSON String  - 
+var str = JSON.stringify(obj)
+
+ajaxload.info
+
+herokuapp.com
+
+-------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------
+
+

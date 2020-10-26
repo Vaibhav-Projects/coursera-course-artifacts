@@ -1,0 +1,48 @@
+* {
+    font-size: 16px;
+}
+
+#header-nav {
+    background-color:grey;
+    border-radius: 0;
+}
+
+
+.nav-brand h1 {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+body > p {
+    padding: 15px;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.content {
+    background-color: grey;
+    margin-bottom:30px;
+}
+
+.content > h2 {
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+.navbar-nav a:hover,.navbar-nav a:focus {
+    text-decoration: none;
+    color: black;
+}
+
+#nav-list {
+    margin-top: 10px;
+}
+
+#nav-list a {
+    color: black;
+    text-align: center;
+}
+
+#nav-list a:hover {
+    background: #E7E7E7;
+}
